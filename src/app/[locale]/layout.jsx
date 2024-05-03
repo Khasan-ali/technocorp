@@ -2,6 +2,7 @@
 import "./globals.css";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 import Footer from '../../components/footer/page'
+import Header from '../../components/header/page'
 
 
 
@@ -18,6 +19,7 @@ export default function RootLayout({ children, params: { locale },  }) {
     <html lang={locale}>
       <body suppressHydrationWarning={true}>
         <NextIntlClientProvider locale={locale} messages={messages}>
+          <Header/>
           {children}
           <Footer/>
         </NextIntlClientProvider>
